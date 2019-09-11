@@ -1,0 +1,68 @@
+Movies :
+- GET (oneById) http://localhost:8001/api/movies/:id (sample : 5b743989e848968a6ad6fc3b)
+
+- GET (all) http://localhost:8001/api/movies/
+
+- PUT (editOneById) http://localhost:8001/api/movies/:id  (sample : 5b743989e848968a6ad6fc3b)
+    JSON :  { 
+                "fields.title": "Thor 2: The Dark World"
+            }
+
+- POST (create) http://localhost:8001/api/movies/
+    JSON : {
+                "fields": {
+                "directors": [
+                    "Jeannot"
+                ],
+                "genres": [
+                    "Tartine",
+                    "Jambon"
+                ],
+                "actors": [
+                    "Kris Worthit",
+                    "Nathalie Portewoman",
+                    "Thomas Communist"
+                ],
+                "release_date": "1990-08-24T00:00:00Z",
+                "image_url": "http://ia.media-imdb.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SX400_.jpg",
+                "plot": "Once upon a time, a movie that doesn't exist was put inside a DB with one purpose : To be removed ",
+                "title": "The Movie of the DB",
+                "rank": 5001,
+                "year": 1990
+                },
+                "type": "add",
+                "id": "abcdefgh123"
+            }
+
+- DEL (byId) http://localhost:8001/api/movies/:id
+
+- GET (search) http://localhost:8001/search?  (sample : fields.title=Thor)
+
+
+
+Users :
+- GET (all) http://localhost:8001/api/users/
+
+- GET (oneById) http://localhost:8001/api/users/:id
+
+- PUT (editOneById) http://localhost:8001/api/users/:id
+    JSON :  {
+                "email": "jean@paul.be",
+                "username": "Jean.Paul",
+                "password": "123456"
+            }
+
+- POST http://localhost:8001/api/users
+    JSON :  {
+                "email": "jean@paul.be",
+                "username": "Jean.Paul",
+                "password": "123456"
+            }
+
+- POST http://localhost:8001/api/users/login
+        JSON :  {
+                "email": "jean@paul.be",
+                "username": "Jean.Paul",
+                "password": "123456"
+            }
+- DEL http://localhost:8001/api/users/:id

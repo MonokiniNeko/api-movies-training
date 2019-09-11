@@ -7,8 +7,6 @@ import moviesSearch from './utils/search';
 import usersRouter from './ressources/user/user.router';
 const app = express();
 
-// json webtoken (pour remplacer la session)
-
 app.disable('x-powered-by');
 
 app.use(json());
